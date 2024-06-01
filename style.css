@@ -1,0 +1,163 @@
+:root {
+    font-size: 62.5%;
+    /* colors */
+    --black-background: #17171A;
+    --black-border: #252529;
+    --orange: #E07B67;
+    --gray-paragraph: #AFABB6;
+    /* fonts */
+    --font-inter: "Inter", sans-serif;
+    --font-space-grotesk: "Space Grotesk", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black-background);
+}
+
+header {
+    padding: 4.8rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+header h1 {
+    color: #fff;
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+    font-size: clamp(2.4rem, 3vw + 1rem, 4rem);
+}
+
+header h1 span {
+    color: var(--orange);
+}
+
+header input {
+    background: #202024;
+    border: 2px solid var(--black-border);
+    border-radius: 8px;
+
+    padding: 1.6rem 2.4rem;
+
+    color: #AFABB6;
+    font-size: clamp(1.4rem, 1vw + 1rem,2rem);
+    font-family: var(--font-inter);
+    font-weight: 500;
+
+    width: 100%;
+
+    transition: border .5s;
+}
+
+main  {
+    margin: 4rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card {
+    border: 2px solid var(--black-border);
+    background: var(--black-background);
+    border-radius: 8px;
+    padding: 3.2rem 2.4rem;
+
+    transition: border .5s;
+}
+
+.card-h-p {
+    color: var(--orange);
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: clamp(1.2rem, 1vw + 0.5rem, 1.6rem);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.card h3 {
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+    font-size: clamp(2rem, 1vw + 1rem , 2.4rem);
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.card-p {
+    color: var(--gray-paragraph);
+    font-family: var(--font-inter);
+    font-size: clamp(1.4rem, 2vw + 0.5rem, 2rem);
+    font-weight: 500;
+    line-height: 160%;
+    margin-top: 1.6rem;
+}
+
+.card:hover {
+    border: 2px solid var(--orange);
+}
+
+header input:hover {
+    border: 2px solid var(--orange);
+}
+
+header input:focus {
+    border: 2px solid var(--orange);
+}
+
+.footer-desc {
+    color: var(--gray-paragraph);
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.footer-desc a {
+    text-decoration: none;
+    color: var(--orange);
+    transition: color .5s;
+}
+
+.footer-desc a:hover {
+    text-decoration: underline;
+    color: #cf5f48;
+}
+
+@media screen and (min-width: 760px) {
+    header {
+        gap: 4.8rem;
+        padding: 6.4rem 3.2rem;
+    }
+
+    main {
+        margin: 5.6rem 3.2rem;
+    }
+}
+
+@media screen and (min-width: 1800px){
+    header {
+        padding: 6.4rem auto;
+    }
+
+    header input{
+        width: 121.6rem;
+    }
+
+    main {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 121.6rem;
+    }
+}
