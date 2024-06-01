@@ -83,6 +83,7 @@ main  {
 .card-header {
     display: flex;
     justify-content: space-between; 
+    position: relative;
 }
 
 .card h3 {
@@ -132,6 +133,21 @@ header input:focus {
     color: #cf5f48;
 }
 
+#icon {
+    fill: var(--black-background);
+    stroke: var(--orange);
+    stroke-width: 7;
+    transition: fill .3s;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+}
+
+#icon.filled,
+#icon:hover {
+    fill: var(--orange);
+}
+
 @media screen and (min-width: 760px) {
     header {
         gap: 4.8rem;
@@ -140,6 +156,11 @@ header input:focus {
 
     main {
         margin: 5.6rem 3.2rem;
+    }
+
+    #icon {
+        width: 2.4rem;
+        height: 2.4rem;
     }
 }
 
@@ -159,5 +180,10 @@ header input:focus {
 
     .card {
         width: 121.6rem;
+    }
+
+    #icon {
+        width: 3.2rem;
+        height: 3.2rem;
     }
 }
